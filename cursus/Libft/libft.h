@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 10:27:39 by jechever          #+#    #+#             */
-/*   Updated: 2023/04/29 11:39:40 by jechever         ###   ########.fr       */
+/*   Created: 2023/04/29 12:04:28 by jechever          #+#    #+#             */
+/*   Updated: 2023/04/29 13:22:49 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#ifndef LIBFT_H
+#define LIBFT_H
 
-int	ft_isalpha(char str)
-{
-	if ((str > 64 && str < 91) || (str > 96 && str < 123))
-		return (1);
-	else
-		return (0);
-}
+// DEPENDECIES
 
-int	main(void)
+#include <stdlib.h>
+#include <unistd.h>
+
+// STRUCTURE
+
+typedef struct s_list
 {
-	printf("%i", ft_isalpha('X'));
-	printf("\n%i", isalpha('X'));
-}
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+int	ft_isalpha(char str);
+int	ft_isdigit(char str);
+int	ft_isalnum(char str);
+
+#endif

@@ -6,27 +6,25 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 10:31:09 by jechever          #+#    #+#             */
-/*   Updated: 2023/04/20 11:16:34 by jechever         ###   ########.fr       */
+/*   Updated: 2023/04/29 11:45:48 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char *str)
-{
-	int	n;
-	int	non_alpha;
+#include <stdio.h>
+#include <ctype.h>
 
-	n = 0;
-	non_alpha = 0;
-	while (str[n] != '\0')
-	{
-		if (str[n] < 48 || str[n] > 122
-			|| (str[n] > 57 && str[n] < 65)
-			|| (str[n] > 90 && str[n] < 97))
-			non_alpha++;
-		n++;
-	}
-	if (non_alpha == 0 || n == 0)
+int	ft_isalnum(char str)
+{
+	if ((str > 47 && str < 58)
+		|| (str > 64 && str < 91)
+		|| (str > 96 && str < 123))
 		return (1);
 	else
 		return (0);
+}
+
+int	main(void)
+{
+	printf("%i", ft_isalnum('*'));
+	printf("\n%i", isalnum('*'));
 }

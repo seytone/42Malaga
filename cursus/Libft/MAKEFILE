@@ -1,0 +1,43 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    MAKEFILE                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/04/29 12:57:50 by jechever          #+#    #+#              #
+#    Updated: 2023/04/29 13:57:46 by jechever         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME			= libft.a
+
+CC				= gcc
+RM				= rm -f
+CFLAGS			= -Wall -Wextra -Werror -I.
+
+SRCS			=	ft_isalnum.c \
+					ft_isprint.c \
+					ft_strncmp.c \
+					ft_isalpha.c \
+					ft_tolower.c \
+					ft_isascii.c \
+					ft_strlen.c \
+					ft_toupper.c \
+					ft_isdigit.c 
+OBJS			= $(SRCS:.c=.o)
+
+all:			$(NAME)
+
+$(NAME):		$(OBJS)
+				ar rcs $(NAME) $(OBJS)
+
+clean:
+				$(RM) $(OBJS)
+
+fclean:			clean
+				$(RM) $(NAME)
+
+re:				fclean $(NAME)
+
+.PHONY:			all clean fclean re bonus

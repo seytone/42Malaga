@@ -6,20 +6,22 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 11:22:38 by jechever          #+#    #+#             */
-/*   Updated: 2023/04/20 11:24:19 by jechever         ###   ########.fr       */
+/*   Updated: 2023/04/29 11:56:11 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_toupper(char *str)
-{
-	int	n;
+#include <stdio.h>
+#include <ctype.h>
 
-	n = 0;
-	while (str[n] != '\0')
-	{
-		if (str[n] >= 97 && str[n] <= 122)
-			str[n] -= 32;
-		n++;
-	}
+char	ft_toupper(char str)
+{
+	if (str >= 97 && str <= 122)
+		str -= 32;
 	return (str);
+}
+
+int	main(void)
+{
+	printf("%s", ft_toupper('a'));
+	printf("\n%s", toupper('a'));
 }

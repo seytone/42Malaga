@@ -6,25 +6,23 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 10:29:40 by jechever          #+#    #+#             */
-/*   Updated: 2023/04/20 10:30:29 by jechever         ###   ########.fr       */
+/*   Updated: 2023/04/29 11:39:16 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char *str)
-{
-	int	n;
-	int	non_digit;
+#include <stdio.h>
+#include <ctype.h>
 
-	n = 0;
-	non_digit = 0;
-	while (str[n] != '\0')
-	{
-		if (str[n] < 48 || str[n] > 57)
-			non_digit++;
-		n++;
-	}
-	if (non_digit == 0 || n == 0)
+int	ft_isdigit(char str)
+{
+	if (str > 47 && str < 58)
 		return (1);
 	else
 		return (0);
+}
+
+int	main(void)
+{
+	printf("%i", ft_isdigit('X'));
+	printf("\n%i", isdigit('X'));
 }

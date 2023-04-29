@@ -6,20 +6,22 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 11:24:48 by jechever          #+#    #+#             */
-/*   Updated: 2023/04/20 11:25:22 by jechever         ###   ########.fr       */
+/*   Updated: 2023/04/29 11:47:35 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_tolower(char *str)
-{
-	int	n;
+#include <stdio.h>
+#include <ctype.h>
 
-	n = 0;
-	while (str[n] != '\0')
-	{
-		if (str[n] >= 65 && str[n] <= 90)
-			str[n] += 32;
-		n++;
-	}
+char	ft_tolower(char str)
+{
+	if (str >= 65 && str <= 90)
+		str += 32;
 	return (str);
+}
+
+int	main(void)
+{
+	printf("%i", ft_tolower('*'));
+	printf("\n%i", tolower('*'));
 }
