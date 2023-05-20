@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 11:24:48 by jechever          #+#    #+#             */
-/*   Updated: 2023/04/29 11:47:35 by jechever         ###   ########.fr       */
+/*   Created: 2023/05/20 10:03:56 by jechever          #+#    #+#             */
+/*   Updated: 2023/05/20 10:03:56 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-char	ft_tolower(char str)
+void *ft_calloc(int count, int size)
 {
-	if (str >= 65 && str <= 90)
-		str += 32;
-	return (str);
-}
+    void *ptr;
 
-int	main(void)
-{
-	printf("%i", ft_tolower('*'));
-	printf("\n%i", tolower('*'));
+    ptr = malloc(count * size);
+    if (!ptr)
+        return (0);
+    ft_bzero(ptr, count * size);
+    return (ptr);
 }

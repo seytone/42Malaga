@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 10:29:40 by jechever          #+#    #+#             */
-/*   Updated: 2023/04/29 11:39:16 by jechever         ###   ########.fr       */
+/*   Created: 2023/05/20 12:55:30 by jechever          #+#    #+#             */
+/*   Updated: 2023/05/20 12:55:30 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-int	ft_isdigit(char str)
+void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (str > 47 && str < 58)
-		return (1);
-	else
-		return (0);
-}
-
-int	main(void)
-{
-	printf("%i", ft_isdigit('X'));
-	printf("\n%i", isdigit('X'));
+    if (!lst || !f)
+        return ;
+    while (lst)
+    {
+        f(lst->content);
+        lst = lst->next;
+    }
 }
