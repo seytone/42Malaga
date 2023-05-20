@@ -6,15 +6,14 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:02:29 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/19 16:02:29 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/20 15:22:31 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(char str)
 {
-	if ((str > 47 && str < 58)
-		|| (str > 64 && str < 91)
-		|| (str > 96 && str < 123))
+	if ((str > 47 && str < 58) || (str > 64 && str < 91) || (str > 96
+			&& str < 123))
 		return (1);
 	else
 		return (0);

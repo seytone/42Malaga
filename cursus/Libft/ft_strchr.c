@@ -6,20 +6,20 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:53:56 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 09:53:56 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/20 15:47:48 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strchr(char *str, char c)
+int	ft_strchr(char *str, char c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        if (str[i] == c)
-            return (1);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }

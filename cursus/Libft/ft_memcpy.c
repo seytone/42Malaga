@@ -6,19 +6,19 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:57:58 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 09:57:58 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/20 15:52:47 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_memcpy(char *dest, char *src, int n)
+int	ft_memcpy(char *dest, char *src, int n)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i < n)
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (0);
 }

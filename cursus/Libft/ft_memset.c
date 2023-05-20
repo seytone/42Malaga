@@ -6,19 +6,19 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:03:15 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/19 16:03:15 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/20 15:45:34 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_memset(char *str, int c, int n)
+int	ft_memset(char *str, int c, int n)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i < n)
-    {
-        str[i] = c;
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (i < n)
+	{
+		str[i] = c;
+		i++;
+	}
+	return (0);
 }

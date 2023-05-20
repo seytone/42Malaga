@@ -6,18 +6,18 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 12:07:14 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 12:07:14 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/20 15:48:19 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *str, void (*f)(unsigned int, char *))
+void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        f(i, &str[i]);
-        i++;
-    }
+	i = 0;
+	while (str[i] != '\0')
+	{
+		f(i, &str[i]);
+		i++;
+	}
 }

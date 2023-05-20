@@ -6,20 +6,20 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:56:04 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 09:56:04 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/20 15:44:48 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_memchr(char *str, char c, int n)
+int	ft_memchr(char *str, char c, int n)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i < n)
-    {
-        if (str[i] == c)
-            return (1);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (i < n)
+	{
+		if (str[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }

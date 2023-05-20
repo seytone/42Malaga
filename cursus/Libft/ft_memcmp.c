@@ -6,20 +6,20 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:59:50 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 09:59:50 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/20 15:44:57 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_memcmp(char *str1, char *str2, int n)
+int	ft_memcmp(char *str1, char *str2, int n)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i < n)
-    {
-        if (str1[i] != str2[i])
-            return (1);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (i < n)
+	{
+		if (str1[i] != str2[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }
