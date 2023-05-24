@@ -6,13 +6,13 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:56:48 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 11:52:03 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:33:16 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_aux(int i, int j)
+char	*ft_aux(int i, int j)
 {
 	char	*aux;
 

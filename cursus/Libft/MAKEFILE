@@ -6,13 +6,13 @@
 #    By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/24 12:29:53 by jechever          #+#    #+#              #
-#    Updated: 2023/05/24 12:29:58 by jechever         ###   ########.fr        #
+#    Updated: 2023/05/24 12:44:30 by jechever         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libft.a
+NAME	=	libft.a
 
-SRCS	=	ft_isalpha.c \
+SRCS	= 	ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
 			ft_isascii.c \
@@ -23,6 +23,7 @@ SRCS	=	ft_isalpha.c \
 			ft_strncmp.c \
 			ft_strlcpy.c \
 			ft_strlcat.c \
+			ft_strnstr.c \
 			ft_bzero.c \
 			ft_memset.c \
 			ft_memcpy.c \
@@ -48,7 +49,7 @@ SRCS	=	ft_isalpha.c \
 
 OBJS	=	$(SRCS:.c=.o)
 			
-SRCS_B	=	ft_lstsize.c \
+SRCS_B	= 	ft_lstsize.c \
 			ft_lstadd_front.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
@@ -60,9 +61,9 @@ SRCS_B	=	ft_lstsize.c \
 
 OBJS_B	=	$(SRCS_B:.c=.o)
 
-CC	= gcc
-CF	= -Wall -Wextra -Werror -I.
-RM	= rm -f
+CC		=	gcc
+CF		=	-Wall -Wextra -Werror -I.
+RM		=	rm -f
 
 all:	$(OBJS)
 
