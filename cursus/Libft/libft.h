@@ -6,7 +6,7 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 12:04:28 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 12:08:28 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:27:46 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ int		ft_memcmp(char *s1, char *s2, int n);
 int		ft_toupper(char str);
 int		ft_tolower(char str);
 int		ft_atoi(char *str);
-int		ft_calloc(int count, int size);
-int		ft_strdup(char *str);
+char	*ft_strdup(char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	*ft_calloc(int count, int size);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
