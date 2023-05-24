@@ -6,11 +6,11 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:03:23 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 15:49:03 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:34:12 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	n;
 

@@ -6,7 +6,7 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:50:50 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 12:26:48 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:35:50 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (0);
-	if (start > ft_strlen(s))
+	if (start > (unsigned int)ft_strlen(s))
 		return (ft_strdup(""));
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)

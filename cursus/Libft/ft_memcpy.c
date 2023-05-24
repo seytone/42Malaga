@@ -6,11 +6,11 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:57:58 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 10:57:36 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:47:33 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcpy(char *dest, char *src, int n)
+int	ft_memcpy(char *dest, const char *src, int n)
 {
 	int	i;
 

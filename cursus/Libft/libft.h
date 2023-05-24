@@ -6,7 +6,7 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 12:04:28 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 12:27:46 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:47:43 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_isdigit(char str);
 int		ft_isalnum(char str);
 int		ft_isascii(char str);
 int		ft_isprint(char str);
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 int		ft_strchr(char *str, char c);
 int		ft_strrchr(char *str, char c);
 int		ft_strncmp(char *s1, char *s2, int n);
@@ -38,9 +38,9 @@ int		ft_strlcpy(char *dest, char *src, int n);
 int		ft_strlcat(char *dest, char *src, int n);
 int		ft_bzero(char *str, int n);
 int		ft_memset(char *str, int c, int n);
-int		ft_memcpy(char *dest, char *src, int n);
+int		ft_memcpy(char *dest, const char *src, int n);
 int		ft_memmove(char *dest, char *src, int n);
-int		ft_memchr(char *str, char c, int n);
+int		ft_memchr(const char *str, char c, int n);
 int		ft_memcmp(char *s1, char *s2, int n);
 int		ft_toupper(char str);
 int		ft_tolower(char str);
