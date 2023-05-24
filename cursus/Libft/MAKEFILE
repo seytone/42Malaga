@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    MAKEFILE                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/29 12:57:50 by jechever          #+#    #+#              #
-#    Updated: 2023/04/29 13:57:46 by jechever         ###   ########.fr        #
+#    Updated: 2023/05/24 12:11:06 by jechever         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ CC	= gcc
 CF	= -Wall -Wextra -Werror -I.
 RM	= rm -f
 
-all:	$(NAME)
+all:	$(OBJS)
 
 $(NAME):$(OBJS)
 		ar rcs $(NAME) $(OBJS)
@@ -72,7 +72,7 @@ $(NAME):$(OBJS)
 $(OBJS):$(SRCS)
 		$(CC) $(CF) -c $(SRCS)
 
-bonus:	$(NAME)
+bonus:	$(OBJS_B)
 
 $(NAME):$(OBJS_B)
 		ar rcs $(NAME) $(OBJS_B)
@@ -80,7 +80,8 @@ $(NAME):$(OBJS_B)
 $(OBJS_B):$(SRCS_B)
 		$(CC) $(CF) -c $(SRCS_B)
 
-clean:	$(RM) $(OBJS) $(OBJS_B)
+clean:
+		$(RM) $(OBJS) $(OBJS_B)
 
 fclean:	clean
 		$(RM) $(NAME)

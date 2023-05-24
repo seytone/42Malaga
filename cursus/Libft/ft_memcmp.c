@@ -6,18 +6,18 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:59:50 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 15:44:57 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:08:16 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(char *str1, char *str2, int n)
+int	ft_memcmp(char *s1, char *s2, int n)
 {
 	int	i;
 
 	i = 0;
 	while (i < n)
 	{
-		if (str1[i] != str2[i])
+		if (s1[i] != s2[i])
 			return (1);
 		i++;
 	}

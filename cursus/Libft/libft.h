@@ -6,15 +6,15 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 12:04:28 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 16:05:03 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:08:28 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define	LIBFT_H
+# define LIBFT_H
 
 // DEPENDECIES
-#include <stdlib.h>
+# include <stdlib.h>
 
 // STRUCTURE
 typedef struct s_list
@@ -32,15 +32,16 @@ int		ft_isprint(char str);
 int		ft_strlen(char *str);
 int		ft_strchr(char *str, char c);
 int		ft_strrchr(char *str, char c);
-int		ft_strncmp(char *str1, char *str2, int n);
+int		ft_strncmp(char *s1, char *s2, int n);
+int		ft_strnstr(char *str, char *to_find, int n);
 int		ft_strlcpy(char *dest, char *src, int n);
 int		ft_strlcat(char *dest, char *src, int n);
 int		ft_bzero(char *str, int n);
 int		ft_memset(char *str, int c, int n);
 int		ft_memcpy(char *dest, char *src, int n);
-int		ft_memmove(char *dest, char *src, i);
+int		ft_memmove(char *dest, char *src, int n);
 int		ft_memchr(char *str, char c, int n);
-int		ft_memcmp(char *str1, char *str2, int n);
+int		ft_memcmp(char *s1, char *s2, int n);
 int		ft_toupper(char str);
 int		ft_tolower(char str);
 int		ft_atoi(char *str);

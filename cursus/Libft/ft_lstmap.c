@@ -6,7 +6,7 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 12:56:15 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 15:22:19 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 11:11:59 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new = 0;
 	while (lst)
 	{
-		if (!(tmp = ft_lstnew(f(lst->content))))
+		tmp = ft_lstnew(f(lst->content));
+		if (!tmp)
 		{
 			ft_lstclear(&new, del);
 			return (0);

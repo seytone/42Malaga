@@ -6,11 +6,22 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:59:25 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 15:19:59 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 11:10:40 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
+char	ft_aux(int i)
+{
+	char	*aux;
+
+	aux = malloc(sizeof(char) * (i + 1));
+	if (!aux)
+		return (0);
+	aux[i + 1] = '\0';
+	return (aux);
+}
 
 char	*ft_itoa(int n)
 {
@@ -30,10 +41,7 @@ char	*ft_itoa(int n)
 		n = n / 10;
 		i++;
 	}
-	str = malloc(sizeof(char) * (i + 1));
-	if (!str)
-		return (0);
-	str[i + 1] = '\0';
+	str = ft_aux(n);
 	while (i >= 0)
 	{
 		str[i] = (n % 10) * sign + '0';
