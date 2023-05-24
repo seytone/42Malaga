@@ -6,7 +6,7 @@
 #    By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/24 12:29:53 by jechever          #+#    #+#              #
-#    Updated: 2023/05/24 12:44:30 by jechever         ###   ########.fr        #
+#    Updated: 2023/05/24 13:52:52 by jechever         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ CC		=	gcc
 CF		=	-Wall -Wextra -Werror -I.
 RM		=	rm -f
 
-all:	$(OBJS)
+all:	$(NAME)
 
 $(NAME):$(OBJS)
 		ar rcs $(NAME) $(OBJS)
@@ -75,7 +75,7 @@ $(OBJS):$(SRCS)
 
 bonus:	$(OBJS_B)
 
-$(NAME):$(OBJS_B)
+$(OBJS_B):$(SRCS_B)
 		ar rcs $(NAME) $(OBJS_B)
 
 $(OBJS_B):$(SRCS_B)
