@@ -6,34 +6,30 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 10:03:02 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 14:53:36 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 12:25:06 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	result;
+	int		sign;
+	long	result;
 
-	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
-		i++;
-	while (str[i] == '+' || str[i] == '-')
+	while (*str == '\t' || *str == '\n' || *str == '\v' || *str == '\f'
+		|| *str == '\r' || *str == ' ')
+		str++;
+	if (*str == '-')
+		sign = -sign;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str != '\0' && ft_isdigit(*str))
 	{
-		if (str[i] == '-')
-			sign = sign * -1;
-		i++;
+		result = result * 10 + (*str - '0');
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	return (result * sign);
+	return (sign * result);
 }

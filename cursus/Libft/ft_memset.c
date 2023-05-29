@@ -6,19 +6,22 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:03:15 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 10:57:48 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:41:50 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memset(char *str, int c, int n)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (i < n)
+void	*ft_memset(void *str, int c, size_t n)
+{
+	char	*ptr;
+
+	ptr = str;
+	while (n > 0)
 	{
-		str[i] = c;
-		i++;
+		*ptr = c;
+		ptr++;
+		n--;
 	}
-	return (0);
+	return (str);
 }

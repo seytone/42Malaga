@@ -6,7 +6,7 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 12:04:28 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 13:47:43 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 14:59:40 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,21 @@ int		ft_isalnum(char str);
 int		ft_isascii(char str);
 int		ft_isprint(char str);
 int		ft_strlen(const char *str);
-int		ft_strchr(char *str, char c);
-int		ft_strrchr(char *str, char c);
-int		ft_strncmp(char *s1, char *s2, int n);
-int		ft_strnstr(char *str, char *to_find, int n);
-int		ft_strlcpy(char *dest, char *src, int n);
-int		ft_strlcat(char *dest, char *src, int n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strrchr(const char *str, int c);
+char	*ft_strnstr(char *str, char *to_find, size_t n);
+int		ft_strlcpy(char *dst, const char *src, size_t size);
+int		ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_bzero(char *str, int n);
-int		ft_memset(char *str, int c, int n);
-int		ft_memcpy(char *dest, const char *src, int n);
-int		ft_memmove(char *dest, char *src, int n);
-int		ft_memchr(const char *str, char c, int n);
-int		ft_memcmp(char *s1, char *s2, int n);
+void	*ft_memset(void *str, int c, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t n);
+void	*ft_memchr(const void *str, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_toupper(char str);
 int		ft_tolower(char str);
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 char	*ft_strdup(char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);

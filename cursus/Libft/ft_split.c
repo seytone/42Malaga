@@ -6,14 +6,14 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:57:24 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 13:49:41 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 23:32:17 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_aux(char const *s, char c, int i, char **str)
+char	*ft_aux_split(char const *s, char c, int i, char **str)
 {
 	int		j;
 	int		k;
@@ -53,6 +53,6 @@ char	**ft_split(char const *s, char c)
 	str = malloc(sizeof(char *) * (ft_strlen(s) + 1));
 	if (!str)
 		return (0);
-	*str = ft_aux(s, c, i, str);
+	*str = ft_aux_split(s, c, i, str);
 	return (str);
 }

@@ -6,13 +6,13 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:56:48 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 12:33:16 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/24 23:32:48 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_aux(int i, int j)
+char	*ft_aux_strtrim(int i, int j)
 {
 	char	*aux;
 
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = ft_strlen(s1) - 1;
 	while (j > i && ft_memchr(set, s1[j], ft_strlen(set)))
 		j--;
-	str = ft_aux(i, j);
+	str = ft_aux_strtrim(i, j);
 	while (i <= j)
 	{
 		str[k] = s1[i];

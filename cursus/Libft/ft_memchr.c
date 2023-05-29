@@ -6,19 +6,23 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:56:04 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 13:41:00 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 14:18:26 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memchr(const char *str, char c, int n)
+#include "libft.h"
+
+void	*ft_memchr(const void *str, int c, size_t size)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*ptr;
 
 	i = 0;
-	while (i < n)
+	ptr = ((unsigned char *)str);
+	while (i < size)
 	{
-		if (str[i] == c)
-			return (1);
+		if (ptr[i] == (unsigned char)c)
+			return (&ptr[i]);
 		i++;
 	}
 	return (0);
