@@ -6,53 +6,60 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:57:24 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 23:32:17 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:18:07 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_aux_split(char const *s, char c, int i, char **str)
+static int	ft_count_words(const char *s, char c)
 {
-	int		j;
-	int		k;
-
-	j = 0;
-	k = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			i++;
-		else
-		{
-			while (s[i + j] != c && s[i + j] != '\0')
-				j++;
-			str[k] = malloc(sizeof(char) * (j + 1));
-			if (!str[k])
-				return (0);
-			ft_memcpy(str[k], &s[i], j);
-			str[k][j] = '\0';
-			k++;
-			i = i + j;
-			j = 0;
-		}
-	}
-	str[k] = 0;
-	return (*str);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**str;
-	int		i;
+	int	words;
+	int	i;
 
 	i = 0;
+	words = 0;
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i])
+	{
+		if (s[i] == c && s[i + 1] != '\0' && s[i + 1] != c)
+			words++;
+		i++;
+	}
+	return (words + 1);
+}
+
+static void	*ft_clear(char **data)
+{
+	free(data);
+	return (NULL);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	size_t	i;
+	size_t	start;
+	int		words;
+	char	**matrix;
+
 	if (!s)
 		return (0);
-	str = malloc(sizeof(char *) * (ft_strlen(s) + 1));
-	if (!str)
-		return (0);
-	*str = ft_aux_split(s, c, i, str);
-	return (str);
+	matrix = (char **) malloc (sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!matrix)
+		return (ft_clear(matrix));
+	i = 0;
+	words = 0;
+	while (s[i] && words < ft_count_words(s, c))
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (start != i)
+			matrix[words++] = ft_substr(s, start, (i - start));
+	}
+	matrix[words] = 0;
+	return (matrix);
 }

@@ -6,13 +6,13 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:55:52 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 15:48:28 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:12:41 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*str;
 	int		i;

@@ -6,46 +6,39 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:56:48 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 23:32:48 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:04:48 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_aux_strtrim(int i, int j)
+size_t	pos(const char *s1, const char *set, size_t cont)
 {
-	char	*aux;
+	int	flag;
 
-	aux = malloc(sizeof(char) * (j - i + 2));
-	if (!aux)
-		return (0);
-	return (aux);
+	flag = 1;
+	if (cont == 0)
+		flag = 0;
+	while (ft_strchr(set, *(s1 + cont)))
+	{
+		if (flag == 0)
+			cont++;
+		else
+			cont--;
+	}
+	return (cont);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	char	*str;
-	int		i;
-	int		j;
-	int		k;
+	size_t	start;
+	size_t	end;
 
-	i = 0;
-	j = 0;
-	k = 0;
 	if (!s1 || !set)
 		return (0);
-	while (s1[i] != '\0' && ft_memchr(set, s1[i], ft_strlen(set)))
-		i++;
-	j = ft_strlen(s1) - 1;
-	while (j > i && ft_memchr(set, s1[j], ft_strlen(set)))
-		j--;
-	str = ft_aux_strtrim(i, j);
-	while (i <= j)
-	{
-		str[k] = s1[i];
-		i++;
-		k++;
-	}
-	str[k] = '\0';
-	return (str);
+	if (!*s1)
+		return (ft_calloc(1, 1));
+	start = pos(s1, set, 0);
+	end = pos(s1, set, ft_strlen(s1));
+	return (ft_substr(s1, start, end - start + 1));
 }

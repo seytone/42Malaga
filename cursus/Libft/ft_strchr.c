@@ -6,23 +6,23 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:53:56 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/29 14:24:12 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 17:27:54 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-	int	i;
+	unsigned char	x;
 
-	i = 0;
-	while (str[i] != '\0')
+	x = (unsigned char)c;
+	if (x >= 0 && x <= 255)
 	{
-		if (str[i] == c)
-			return (&str[i]);
-		i++;
+		while (*str != x)
+		{
+			if (*str == '\0')
+				return (0);
+			str++;
+		}
 	}
-	if (c == '\0')
-		return (&str[i]);
-	else
-		return (0);
+	return ((char *)str);
 }

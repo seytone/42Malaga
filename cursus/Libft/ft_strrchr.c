@@ -6,11 +6,11 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:54:52 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/29 14:26:15 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 17:32:45 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *str, char c)
+char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
 
@@ -19,8 +19,8 @@ char	*ft_strrchr(char *str, char c)
 		i++;
 	while (i >= 0)
 	{
-		if (str[i] == c)
-			return (&str[i]);
+		if (str[i] == (char)c)
+			return ((char *)&str[i]);
 		i--;
 	}
 	return (0);
