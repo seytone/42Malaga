@@ -6,13 +6,13 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:02:38 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 15:25:03 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 15:37:48 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char str)
+int	ft_isalpha(int c)
 {
-	if ((str > 64 && str < 91) || (str > 96 && str < 123))
+	if ((c > 64 && c < 91) || (c > 96 && c < 123))
 		return (1);
 	else
 		return (0);

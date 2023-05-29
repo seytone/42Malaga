@@ -6,13 +6,13 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:03:00 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/19 16:03:00 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 15:40:38 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char str)
+int	ft_isdigit(int c)
 {
-	if (str > 47 && str < 58)
+	if (c > 47 && c < 58)
 		return (1);
 	else
 		return (0);

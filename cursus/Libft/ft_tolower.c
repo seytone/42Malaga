@@ -6,13 +6,13 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:03:38 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/19 16:03:38 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 15:48:25 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(char str)
+int	ft_tolower(int c)
 {
-	if (str >= 65 && str <= 90)
-		str += 32;
-	return (str);
+	if (c >= 65 && c <= 90)
+		c += 32;
+	return (c);
 }

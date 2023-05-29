@@ -6,13 +6,13 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:02:52 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 23:24:12 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 15:41:16 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char str)
+int	ft_isascii(int c)
 {
-	if (str >= 0 && str <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

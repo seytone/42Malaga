@@ -6,13 +6,13 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:03:08 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 23:37:07 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/29 15:41:48 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char str)
+int	ft_isprint(int c)
 {
-	if (str > 31 && str < 127)
+	if (c > 31 && c < 127)
 		return (1);
 	else
 		return (0);
