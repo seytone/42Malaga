@@ -6,11 +6,13 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:03:23 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/24 13:34:12 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/30 11:06:27 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	n;
 

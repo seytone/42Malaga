@@ -6,7 +6,7 @@
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 12:04:28 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/29 18:11:56 by jechever         ###   ########.fr       */
+/*   Updated: 2023/05/30 11:55:46 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
