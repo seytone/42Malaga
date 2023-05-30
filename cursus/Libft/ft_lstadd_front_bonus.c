@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jechever <jechever@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/20 12:52:44 by jechever          #+#    #+#             */
-/*   Updated: 2023/05/20 15:44:32 by jechever         ###   ########.fr       */
+/*   Created: 2023/05/20 12:51:53 by jechever          #+#    #+#             */
+/*   Updated: 2023/05/30 13:41:12 by jechever         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int	i;
-
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
